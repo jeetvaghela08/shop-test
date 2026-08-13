@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://shopteststore.netlify.app",
+      "localStorage": [
+        {
+          "name": "shop_access_token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NTEwODhmZi05NDIzLTQyZDAtYTUyZS05Y2Y5OWY0YmNiMzkiLCJlbWFpbCI6ImN1c3RvbWVyQHNob3AudGVzdCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc4NjYzODAyMywiZXhwIjoxNzg2NjQxNjIzfQ.WWxTagE4JPUUMxq3g_UHqU0nsSQ6cPpf-muP9zpSU14"
+        },
+        {
+          "name": "shop_refresh_token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NTEwODhmZi05NDIzLTQyZDAtYTUyZS05Y2Y5OWY0YmNiMzkiLCJlbWFpbCI6ImN1c3RvbWVyQHNob3AudGVzdCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc4NjYzODAyMywiZXhwIjoxNzg3MjQyODIzfQ.zQ7K4ONp-6eZNJpIDYyIw04oZfVeAGsCWVG8-h1266E"
+        }
+      ]
+    }
+  ]
+}
