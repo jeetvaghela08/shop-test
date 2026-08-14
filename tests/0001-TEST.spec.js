@@ -31,7 +31,7 @@ test('Admin adds product and Customer verifies product', async ({
   await adminProductPage.clickAddProduct();
   await adminProductPage.createNewProduct(product);
   await adminProductPage.verifyProductIsVisible(product.name);
-await customerDashboardPage.selectProductCategory(product.category);
+
 
   // =====================================================
   // CUSTOMER
@@ -58,7 +58,7 @@ await customerDashboardPage.selectProductCategory(product.category);
 
   await customerDashboardPage.searchForProduct(product.name);
   
-
+  await customerDashboardPage.selectProductCategory(product.category);
 
   // =====================================================
   // PRODUCT DETAIL

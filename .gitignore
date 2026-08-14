@@ -1,8 +1,19 @@
-
-# Playwright
+# Dependencies
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Authentication / Playwright state
+.auth/
+playwright/.auth/
+
+# Playwright reports
+test-results/
+playwright-report/
+blob-report/
+
+# Playwright cache
+playwright/.cache/
