@@ -22,18 +22,31 @@ test('auth setup', async ({ browser }) => {
       password: process.env.CUSTOMER_PASSWORD,
       authFile: '.auth/customer.json',
     },
+    //     {
+    //   role: 'admin2',
+    //   username: process.env.ADMIN2_USERNAME,
+    //   password: process.env.ADMIN2_PASSWORD,
+    //   authFile: '.auth/admin2.json',
+    // },
     {
       role: 'seller',
       username: process.env.SELLER_USERNAME,
       password: process.env.SELLER_PASSWORD,
       authFile: '.auth/seller.json',
     },
-    {
-      role: 'abc',
-      username: process.env.ABC_USERNAME,
-      password: process.env.ABC_PASSWORD,
-      authFile: '.auth/abc.json',
-    },
+    //     {
+    //   role: 'seller2',
+    //   username: process.env.SELLER2_USERNAME,
+    //   password: process.env.SELLER2_PASSWORD,
+    //   authFile: '.auth/seller2.json',
+    // },
+    //     {
+    //   role: 'customer2',
+    //   username: process.env.CUSTOMER2_USERNAME,
+    //   password: process.env.CUSTOMER2_PASSWORD,
+    //   authFile: '.auth/customer2.json',
+    // },
+
   ];
 
   if (!fs.existsSync('.auth')) {
@@ -57,8 +70,10 @@ test('auth setup', async ({ browser }) => {
       await page.waitForLoadState('domcontentloaded', { timeout: 60_000 });
       await login.login(user.username, user.password);
 
-      await page.waitForLoadState('load', { timeout: 60_000 });
-      await page.waitForTimeout(1000);
+      await expect(page.getByRole('button', { name: /logout/i }))
+    
+      .toBeVisible({ timeout: 60_000 });
+
       await context.storageState({ path: user.authFile });
 
       const authState = JSON.parse(fs.readFileSync(user.authFile, 'utf8'));

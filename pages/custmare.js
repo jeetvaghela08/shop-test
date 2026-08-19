@@ -58,20 +58,23 @@ class costomerPage {
     
     }
 
-
-
-
-
-  
-
-
-
     // =====================================================
     // CUSTOMER login and verify product detail page
     // =====================================================
-    async clickOnProductImage() {
-        await this.productImageLink.first().click();
-    }
+   async clickOnProductImage(productName) {
+
+    const productCard = this.page
+        .getByTestId('product-card')
+        .filter({ hasText: productName });
+
+    await expect(productCard).toBeVisible({
+        timeout: 10000
+    });
+
+    await productCard
+        .getByTestId('product-card-image-link')
+        .click();
+}
 
  async verifyProductDetailPagee2e(
     productName,
